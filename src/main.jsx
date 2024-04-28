@@ -27,6 +27,8 @@ import CombodiaAllData from './components/AllCountryData/Combodia/CombodiaAllDat
 import CombodiaViewDetails from './components/AllCountryData/Combodia/CombodiaViewDetails';
 import AllTouristSpot from './components/AllSpot/AllTouristSpot';
 import AllDataViewDetails from './components/AllSpot/AllDataViewDetails';
+import Mylist from './components/Mylist/Mylist';
+import UpdateSpot from './components/UpdateSpot/UpdateSpot';
 
 const router = createBrowserRouter([
   {
@@ -48,7 +50,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/addSpot',
-        element : <PrivateRoute><AddTouristSpot></AddTouristSpot></PrivateRoute>
+        element: <PrivateRoute><AddTouristSpot></AddTouristSpot></PrivateRoute>
       },
       {
         path: '/bdviewDetails',
@@ -91,34 +93,43 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/malData')
       },
       {
-        path : '/vietViewDetails',
-        element : <VietnamAllSpot></VietnamAllSpot>,
-        loader : () => fetch('http://localhost:5000/vietData')
+        path: '/vietViewDetails',
+        element: <VietnamAllSpot></VietnamAllSpot>,
+        loader: () => fetch('http://localhost:5000/vietData')
       },
       {
-        path : '/vietviewDetails/:id',
-        element : <VietnamViewDetails></VietnamViewDetails>,
-        loader : () => fetch('http://localhost:5000/vietData')
+        path: '/vietviewDetails/:id',
+        element: <VietnamViewDetails></VietnamViewDetails>,
+        loader: () => fetch('http://localhost:5000/vietData')
       },
       {
-        path : '/comboViewDetails',
-        element : <CombodiaAllData></CombodiaAllData>,
-        loader : () => fetch('http://localhost:5000/colombiaData')
+        path: '/comboViewDetails',
+        element: <CombodiaAllData></CombodiaAllData>,
+        loader: () => fetch('http://localhost:5000/colombiaData')
       },
       {
-        path : '/comboviewDetails/:id',
-        element : <CombodiaViewDetails></CombodiaViewDetails>,
-        loader : () => fetch('http://localhost:5000/colombiaData')
+        path: '/comboviewDetails/:id',
+        element: <CombodiaViewDetails></CombodiaViewDetails>,
+        loader: () => fetch('http://localhost:5000/colombiaData')
       },
       {
-        path : '/allSpot',
-        element : <PrivateRoute><AllTouristSpot></AllTouristSpot></PrivateRoute>,
-        loader : () => fetch('http://localhost:5000/allSpotData')
+        path: '/allSpot',
+        element: <PrivateRoute><AllTouristSpot></AllTouristSpot></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/allSpotData')
       },
       {
-        path : '/allDataViewDetails/:id',
-        element : <AllDataViewDetails></AllDataViewDetails>,
-        loader : () => fetch('http://localhost:5000/allSpotData')
+        path: '/allDataViewDetails/:id',
+        element: <AllDataViewDetails></AllDataViewDetails>,
+        loader: () => fetch('http://localhost:5000/allSpotData')
+      },
+      {
+        path: '/myList',
+        element: <PrivateRoute><Mylist></Mylist></PrivateRoute>,
+      },
+      {
+        path :'/updateSpot/:id',
+        element : <UpdateSpot></UpdateSpot>,
+        loader : ({params}) => fetch(`http://localhost:5000/addspot/${params.id}`)
       }
     ]
   },

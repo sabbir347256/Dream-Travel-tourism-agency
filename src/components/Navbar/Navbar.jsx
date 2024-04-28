@@ -28,7 +28,6 @@ const Navbar = () => {
             setTheme('light');
         }
     }
-    console.log(theme);
     const handleSignout = () => {
         logout()
             .then()
@@ -41,7 +40,6 @@ const Navbar = () => {
         <li><NavLink to='/allSpot'>All Tourists Spot</NavLink></li>
         <li><NavLink to='/addSpot'>Add Tourists Spot</NavLink></li>
         <li><NavLink to='/myList'>My List</NavLink></li>
-        <li><NavLink to='/login'>Login</NavLink></li>
         <li><NavLink to='/register'>Register</NavLink></li>
 
     </>
