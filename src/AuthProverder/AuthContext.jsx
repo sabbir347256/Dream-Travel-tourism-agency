@@ -5,11 +5,13 @@ import PropTypes from 'prop-types'
 export const AuthProvider = createContext();
 const AuthContext = ({children}) => {
     const [user,setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             console.log('Current user is stay here', currentUser)
             setUser(currentUser);
+            setLoading(false);
         });
         return () => {
             unSubscribe();
@@ -17,6 +19,7 @@ const AuthContext = ({children}) => {
     }, []);
 
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
@@ -29,9 +32,11 @@ const AuthContext = ({children}) => {
     };
 
     const googleLogin = (provider) => {
+        setLoading(true)
         return signInWithPopup(auth, provider);
     }
     const gitHubLogin = (githubProvider) =>{
+        setLoading(true)
         return signInWithPopup(auth,githubProvider);
     }
 
@@ -40,6 +45,7 @@ const AuthContext = ({children}) => {
         createUser,
         signIn,
         logout,
+        loading,
         googleLogin,
         gitHubLogin
     }

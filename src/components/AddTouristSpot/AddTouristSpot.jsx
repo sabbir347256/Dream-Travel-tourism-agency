@@ -35,31 +35,31 @@ const AddTouristSpot = () => {
     return (
         <div className="bgImage border h-screen text-center">
             <form onSubmit={handleAddData}>
-                <div className="mt-32 flex items-center justify-center">
+                <div className="mt-16 lg:mt-32 flex flex-col md:flex-row lg:flex-row items-center justify-center">
                     <div>
-                        <input className="p-2 w-96 rounded-xl" type="text" name="photo" placeholder="photo" id="" />
+                        <input className="p-2 w-60 md:w-60 lg:w-96 rounded-xl" type="text" name="photo" placeholder="photo" id="" />
                         <br />
-                        <input className="my-3 p-2 w-96 rounded-xl" type="text" name="spotName" placeholder="Tourist Spot Name" id="" />
+                        <input className="my-3 p-2 w-60 md:w-60 lg:w-96 rounded-xl" type="text" name="spotName" placeholder="Tourist Spot Name" id="" />
                         <br />
-                        <input className="p-2 w-96 rounded-xl" type="text" name="countryName" placeholder="Country Name" id="" />
+                        <input className="p-2 w-60 md:w-60 lg:w-96 rounded-xl" type="text" name="countryName" placeholder="Country Name" id="" />
                         <br />
-                        <input className="my-3 p-2 w-96 rounded-xl" type="text" name="location" placeholder="Location" id="" />
+                        <input className="my-3 p-2 w-60 md:w-60 lg:w-96 rounded-xl" type="text" name="location" placeholder="Location" id="" />
                         <br />
-                        <input className="p-2 w-96 rounded-xl" type="text" name="description" placeholder="Description" id="" />
+                        <input className="p-2 w-60 md:w-60 lg:w-96 rounded-xl" type="text" name="description" placeholder="Description" id="" />
                     </div>
-                    <div className="ml-10">
-                        <input className="p-2 w-96 rounded-xl" type="text" name="cost" placeholder="Average Cost" id="" />
+                    <div className="mt-2 md:mt-0 lg:mt-0 ml-0 md:ml-10 lg:ml-10">
+                        <input className="p-2 w-60 md:w-60 lg:w-96 rounded-xl" type="text" name="cost" placeholder="Average Cost" id="" />
                         <br />
-                        <input className="my-3 p-2 w-96 rounded-xl" type="text" name="seasonality" placeholder="Seasonality" id="" />
+                        <input className="my-3 p-2 w-60 md:w-60 lg:w-96 rounded-xl" type="text" name="seasonality" placeholder="Seasonality" id="" />
                         <br />
-                        <input className="p-2 w-96 rounded-xl" type="text" name="travelTime" placeholder="Travel Time" id="" />
+                        <input className="p-2 w-60 md:w-60 lg:w-96 rounded-xl" type="text" name="travelTime" placeholder="Travel Time" id="" />
                         <br />
-                        <input className="my-3 p-2 w-96 rounded-xl" type="text" name="totaVisitorsPerYear" placeholder="Total Visitor Per Year" id="" />
+                        <input className="my-3 p-2 w-60 md:w-60 lg:w-96 rounded-xl" type="text" name="totaVisitorsPerYear" placeholder="Total Visitor Per Year" id="" />
                         <br />
-                        <input className="p-2 w-96 rounded-xl" type="text" name="email" placeholder="User Email" id="" />
+                        <input className="p-2 w-60 md:w-60 lg:w-96 rounded-xl" type="text" name="email" placeholder="User Email" id="" />
                     </div>
                 </div>
-                <input className="w-[810px] mt-3 p-2 rounded-xl" type="text" name="name" placeholder="User Name" id="" />
+                <input className="w-[240px] md:w-[522px] lg:w-[810px] mt-3 p-2 rounded-xl" type="text" name="name" placeholder="User Name" id="" />
                 <div>
                     <button className="btn btn-success w-[400px] mt-3 text-white text-xl font-bold"><input type="submit" value="Add" /></button>
                 </div>

@@ -1,5 +1,4 @@
-// import { useEffect, useState } from "react";
-// import TourismCard from "./TourismCard";
+
 import { NavLink } from 'react-router-dom';
 import bd from './New folder/images.jpg'
 import thai from './New folder/thailand.jpg'
@@ -8,18 +7,10 @@ import mal from './New folder/mal.jpg'
 import viet from './New folder/viet.jpg'
 import cam from './New folder/cam.jpg'
 
+
 const TourismCountry = () => {
-
-    // const [tourismData, setTourismData] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/tourismData')
-    //         .then(res => res.json())
-    //         .then(data => setTourismData(data))
-    // }, [])
-
     return (
-        <div className="mt-20 libre-font bg-gray-50  max-w-6xl mx-auto pt-10 rounded-lg">
+        <div className="libre-font bg-gray-50  max-w-6xl mx-auto pt-10 rounded-lg">
             <div className="text-emerald-800">
                 <h2 className="text-center text-4xl font-bold ">Checkout Beautiful Places <br /> Arround the World</h2>
             </div>
@@ -80,14 +71,6 @@ const TourismCountry = () => {
                 </div>
             </div>
         </div>
-        // <div className="mt-20 libre-font bg-gray-50  max-w-6xl mx-auto pt-10 rounded-lg">
-
-        //     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-7">
-        //         {
-        //             tourismData.map(data => <TourismCard key={data._id} data={data}></TourismCard>)
-        //         }
-        //     </div>
-        // </div>
     );
 };
 

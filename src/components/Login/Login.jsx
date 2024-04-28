@@ -1,15 +1,18 @@
 import bgImage from './loginpage.jpg';
 import { AuthProvider } from '../../AuthProverder/AuthContext';
-import { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { FaFacebook, FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { GithubAuthProvider } from 'firebase/auth';
+import Swal from 'sweetalert2';
 const Login = () => {
     const { signIn,googleLogin,gitHubLogin } = useContext(AuthProvider);
     const provider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
+    const navigate = useNavigate();
+    const [success,setSuccess] = useState('');
 
     const handleLogin = e => {
         e.preventDefault();
@@ -18,9 +21,20 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password)
 
+        setSuccess('');
         signIn(email, password)
             .then(result => {
-                console.log(result.user)
+                console.log(result.user);
+                setSuccess(
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Log In Succesfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
+                );
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.error(error);
@@ -31,6 +45,16 @@ const Login = () => {
         googleLogin(provider)
             .then(result => {
                 console.log(result.user)
+                setSuccess(
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Log In Succesfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
+                );
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.error(error);
@@ -41,6 +65,16 @@ const Login = () => {
         gitHubLogin(githubProvider)
         .then(result =>{
             console.log(result.user)
+            setSuccess(
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Log In Succesfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            );
+            navigate(location?.state ? location.state : '/')
         })
         .catch(error =>{
             console.error(error.message)
@@ -50,11 +84,11 @@ const Login = () => {
 
 
     return (
-        <div className='grid grid-cols-5 libre-font'>
-            <div className='col-span-3 border'>
-                <img className='w-[770px] h-[640px]' src={bgImage} alt="" />
+        <div className='grid grid-cols-1 md:grid-cols-4  lg:grid-cols-5 libre-font'>
+            <div className='col-span-1 md:col-span-2 lg:col-span-3 border'>
+                <img className='w-[770px] h-[300px] md:h-[640px]' src={bgImage} alt="" />
             </div>
-            <div className='bg-blue-200 border-2 col-span-2'>
+            <div className='bg-blue-200 border-2 col-span-1 md:col-span-2 lg:col-span-2'>
                 <form onSubmit={handleLogin} className="card-body mt-20">
                     <div className="form-control">
                         <label className="label">
@@ -93,6 +127,9 @@ const Login = () => {
             </div>
             <p data-aos="fade-up" data-aos-duration='1000' className="text-center my-4 mb-12 pb-5">Do not have an account ? Please <NavLink className='text-blue-800 font-semibold' to='/register'>Register</NavLink></p>
             </div>
+            {
+                success && <p>{success}</p>
+            }
         </div>
     );
 };

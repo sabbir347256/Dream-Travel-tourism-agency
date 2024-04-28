@@ -6,8 +6,18 @@ import pic3 from './New folder/cambabia.jpg';
 import pic4 from './New folder/malyesia.jpg';
 import pic5 from './New folder/vietnum.jpg';
 import pic6 from './New folder/thiland.jpg';
+import { useTypewriter } from 'react-simple-typewriter'
+
 
 const Slider = () => {
+    const [typeEffect] = useTypewriter({
+        words :['Your Journey Begins Here '],
+        loop :{},
+        typeSpeed : 100,
+        deleteSpeed:40,
+        
+    })
+    
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -28,14 +38,17 @@ const Slider = () => {
         }
     };
     return (
-        <Carousel className="mt-8 shadow-lg" responsive={responsive}>
-            <div><img className="w-[435px] h-80" src={pic1} alt="" /></div>
-            <div><img className="w-[435px] h-80" src={pic2} alt="" /></div>
-            <div><img className="w-[435px] h-80" src={pic3} alt="" /></div>
-            <div><img className="w-[435px] h-80" src={pic4} alt="" /></div>
-            <div><img className="w-[435px] h-80" src={pic5} alt="" /></div>
-            <div><img className="w-[435px] h-80" src={pic6} alt="" /></div>
-        </Carousel>
+        <div>
+            <Carousel className=" shadow-lg" responsive={responsive}>
+                <div><img className="w-[435px] h-80" src={pic1} alt="" /></div>
+                <div><img className="w-[435px] h-80" src={pic2} alt="" /></div>
+                <div><img className="w-[435px] h-80" src={pic3} alt="" /></div>
+                <div><img className="w-[435px] h-80" src={pic4} alt="" /></div>
+                <div><img className="w-[435px] h-80" src={pic5} alt="" /></div>
+                <div><img className="w-[435px] h-80" src={pic6} alt="" /></div>
+            </Carousel>
+            <h2 className="text-3xl md:text-4xl lg:text-6xl text-center font-bold relative bottom-60  z-10 text-[#FF0060] libre-font">{typeEffect}<br /> Be Safe & Careful</h2>
+        </div>
     );
 };
 

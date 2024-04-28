@@ -1,10 +1,19 @@
 import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useTypewriter } from 'react-simple-typewriter'
 import { AuthProvider } from "../../AuthProverder/AuthContext";
 
 const Navbar = () => {
     const {user,logout} = useContext(AuthProvider);
     const [theme,setTheme] = useState('light');
+
+    const [typeEffect] = useTypewriter({
+        words :['DREAM TRAVEL'],
+        loop :{},
+        typeSpeed : 100,
+        deleteSpeed:40,
+        
+    })
 
     useEffect(() =>{
         localStorage.setItem('theme',theme);
@@ -47,14 +56,14 @@ const Navbar = () => {
                         {navlinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">DREAM Travel</a>
+                <a className="btn btn-ghost text-xl text-green-500"><span>{typeEffect}</span></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-semibold">
                     {navlinks}
                 </ul>
             </div>
-            <label className="cursor-pointer grid place-items-center mx-6">
+            <label className="cursor-pointer grid place-items-center mx-6 relative top-14 md:top-0 lg:top-0 left-32 md:left-44 lg:left-0 z-10">
                 <input
                 onChange={toggleTheme}
                 type="checkbox" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />

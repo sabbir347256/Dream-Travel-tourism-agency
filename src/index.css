@@ -21,3 +21,6 @@
 .ibmFont{
     font-family: "IBM Plex Serif", serif;
   }
+  .footerImage{
+    background-image: url(../src/image/footerbg.jpg);
+  }
