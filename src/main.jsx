@@ -114,8 +114,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/allSpot',
-        element: <PrivateRoute><AllTouristSpot></AllTouristSpot></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/allSpotData')
+        element: <PrivateRoute><AllTouristSpot></AllTouristSpot></PrivateRoute>
       },
       {
         path: '/allDataViewDetails/:id',

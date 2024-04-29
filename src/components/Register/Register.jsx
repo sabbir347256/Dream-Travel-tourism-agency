@@ -50,7 +50,7 @@ const Register = () => {
     return (
         <div className='grid grid-cols-1 md:grid-cols-4  lg:grid-cols-5 libre-font'>
             <div className='col-span-1 md:col-span-2 lg:col-span-3 border'>
-                <img className='w-[770px] h-[300px] md:h-[640px]' src={bgImage} alt="" />
+                <img className='w-[770px] h-[300px] md:h-[660px]' src={bgImage} alt="" />
             </div>
             <div className='bg-blue-200 border-2 col-span-2'>
                 <form onSubmit={handleRegister} className="card-body mt-20">
