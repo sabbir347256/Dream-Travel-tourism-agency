@@ -5,7 +5,7 @@ import { IoLocationOutline } from "react-icons/io5";
 const TouristSpotSetion = () => {
     return (
         <div className="bg-gray-200">
-            <h2 data-aos="flip-right" data-aos-duration='2000' className="poppinsFont text-center py-10"><span className="text-5xl text-[#0F2454] font-bold"></span> <span className="text-5xl text-[#2095AE] font-bold ml-4">TOURISTS</span></h2>
+            <h2 data-aos="flip-right" data-aos-duration='2000' className="poppinsFont text-center py-10"><span className="text-5xl text-[#0F2454] font-bold">POPULAR</span> <span className="text-5xl text-[#2095AE] font-bold ml-4">TOURISTS</span></h2>
             <div className="max-w-6xl mx-auto ml-0 lg:ml-11 poppinsFont p-10 lg:p-0 py-0 lg:py-16 ">
                 <div className="grid grid-cols-1 lg:grid-cols-5  w-full">
                     <div className="bdHomeImg col-span-1 lg:col-span-3 p-4" >
