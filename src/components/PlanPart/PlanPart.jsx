@@ -6,7 +6,7 @@ const PlanPart = () => {
                 <img className='rounded-full' src={image} alt="" />
             </div>
             <div className='ml-10  lg:mt-16'data-aos="fade-down" data-aos-duration='1000'>
-                <h2 className='text-4xl font-bold'>Plan Your Trip with Trevily</h2>
+                <h2 className='text-4xl font-bold'>Plan Your Trip with DREAM Travel</h2>
                 <p className='my-4'>There are many variations of passages of available but the majority have suffered alteration in some form, by injected hum randomised words which do not look even slightly.</p>
                 <ul>
                     <p>Invest in your simply neighborhood</p>
