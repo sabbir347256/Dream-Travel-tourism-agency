@@ -8,7 +8,7 @@ const Discount = () => {
             <div className="w-3/5 ml-0 md:ml-44 lg:ml-0">
                 <h2 data-aos="fade-right" data-aos-duration='1000' className="text-4xl text-center font-extrabold mb-10 mt-20  w-[350px] md:w-full lg:w-full left-5 md:left-0 lg:left-0 relative">90,100 Marker In 120+ Countries.</h2>
                 <div className="flex flex-col md:flex-row lg:flex-row">
-                    <div className="relative left-20 md:left-0 lg:left-0" data-aos="flip-right" data-aos-duration='1000'>
+                    <div className="relative left-20 md:left-0 lg:left-0" data-aos="fade-right" data-aos-duration='1000'>
                         <div className="flex items-center">
                             <div className="bg-green-400 mr-4 p-2 rounded-full ">
                                 <FaUserCircle className="text-pink-200"></FaUserCircle>
@@ -28,7 +28,7 @@ const Discount = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="ml-10 relative left-10 mt-7 md:mt-0 lg:mt-0 md:left-0 lg:left-0"data-aos="flip-right" data-aos-duration='1000'>
+                    <div className="ml-10 relative left-10 mt-7 md:mt-0 lg:mt-0 md:left-0 lg:left-0"data-aos="fade-right" data-aos-duration='1000'>
                         <div className="flex items-center mb-12">
                             <div className="bg-red-400 mr-4 p-2 rounded-full" >
                                 <FaRegIdBadge></FaRegIdBadge>
