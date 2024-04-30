@@ -7,6 +7,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { GithubAuthProvider } from 'firebase/auth';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 const Login = () => {
     const { signIn, googleLogin, gitHubLogin } = useContext(AuthProvider);
     const provider = new GoogleAuthProvider();
@@ -89,6 +90,9 @@ const Login = () => {
 
     return (
         <div className='grid grid-cols-1 md:grid-cols-4  lg:grid-cols-5 libre-font'>
+            <Helmet>
+                <title>DREAM TRAVEL - Login</title>
+            </Helmet>
             <div className='col-span-1 md:col-span-2 lg:col-span-3 border'>
                 <img className='w-[770px] h-[300px] md:h-[660px]' src={bgImage} alt="" />
             </div>
@@ -123,19 +127,19 @@ const Login = () => {
                     <hr className="w-1/3 " /><p className="text-center lg:mx-3">Login with social accounts</p><hr className="w-1/3" />
                 </div>
                 <div className="flex  justify-center items-center my-5">
-                    <div data-aos="fade-left" data-aos-duration='1000' className=" hover:text-2xl">
+                    <div  className=" hover:text-2xl">
                         <button className="duration-150" onClick={googleAccount}><FcGoogle></FcGoogle></button>
                     </div>
-                    <div data-aos="fade-left" data-aos-duration='1000' className=" hover:text-2xl">
+                    <div  className=" hover:text-2xl">
                         <button className="duration-150" ><FaFacebook className="mx-10"></FaFacebook></button>
 
                     </div>
-                    <div data-aos="fade-left" data-aos-duration='1000' className=" hover:text-2xl">
+                    <div className=" hover:text-2xl">
                         <button className="duration-150" onClick={githubLogin} ><FaGithub></FaGithub></button>
 
                     </div>
                 </div>
-                <p data-aos="fade-up" data-aos-duration='1000' className="text-center my-4 mb-12 pb-5">Do not have an account ? Please <NavLink className='text-blue-800 font-semibold' to='/register'>Register</NavLink></p>
+                <p className="text-center my-4 mb-12 pb-5">Do not have an account ? Please <NavLink className='text-blue-800 font-semibold' to='/register'>Register</NavLink></p>
             </div>
             {
                 success && <p>{success}</p>

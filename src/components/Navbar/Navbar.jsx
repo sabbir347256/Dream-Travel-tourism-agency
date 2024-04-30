@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTypewriter } from 'react-simple-typewriter'
 import { AuthProvider } from "../../AuthProverder/AuthContext";
+import logo from './images.png'
 
 const Navbar = () => {
     const {user,logout} = useContext(AuthProvider);
@@ -54,6 +55,7 @@ const Navbar = () => {
                         {navlinks}
                     </ul>
                 </div>
+                <img className="rounded-full w-8 h-8" src={logo} alt="" />
                 <a className="btn btn-ghost text-xl text-green-500"><span>{typeEffect}</span></a>
             </div>
             <div className="navbar-center hidden lg:flex">

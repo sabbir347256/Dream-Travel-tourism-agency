@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -51,6 +52,9 @@ const AddTouristSpot = () => {
 
     return (
         <div className="bgImage border h-screen text-center">
+            <Helmet>
+                <title>DREAM TRAVEL - AddSpot</title>
+            </Helmet>
             <form onSubmit={handleAddData}>
                 <div className="mt-16 lg:mt-32 flex flex-col md:flex-row lg:flex-row items-center justify-center">
                     <div>

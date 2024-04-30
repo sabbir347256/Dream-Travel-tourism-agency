@@ -3,6 +3,7 @@ import bgImage from './regis.jpg';
 import { AuthProvider } from '../../AuthProverder/AuthContext';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 const Register = () => {
     const { createUser } = useContext(AuthProvider);
     const [error, setError] = useState('');
@@ -49,6 +50,9 @@ const Register = () => {
 
     return (
         <div className='grid grid-cols-1 md:grid-cols-4  lg:grid-cols-5 libre-font'>
+            <Helmet>
+                <title>DREAM TRAVEL - Register</title>
+            </Helmet>
             <div className='col-span-1 md:col-span-2 lg:col-span-3 border'>
                 <img className='w-[770px] h-[300px] md:h-[660px]' src={bgImage} alt="" />
             </div>

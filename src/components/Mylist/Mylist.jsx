@@ -3,6 +3,7 @@ import { AuthProvider } from "../../AuthProverder/AuthContext";
 import { Slide } from "react-awesome-reveal";
 import Swal from "sweetalert2";
 import { NavLink } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Mylist = () => {
     const { user } = useContext(AuthProvider);
@@ -51,6 +52,9 @@ const Mylist = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>DREAM TRAVEL - MyList</title>
+            </Helmet>
             {
                 mylist.map(data => <div key={data._id} className="bg-pink-200 flex flex-col md:flex-col lg:flex-row p-10 ibmFont mt-10">
                     <div>

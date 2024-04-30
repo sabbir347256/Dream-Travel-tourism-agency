@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { AuthProvider } from "../../AuthProverder/AuthContext";
+import { Helmet } from "react-helmet-async";
 
 const AllTouristSpot = () => {
     const { loading } = useContext(AuthProvider)
@@ -24,6 +25,9 @@ const AllTouristSpot = () => {
     
     return (
         <div className="bg-gray-100">
+            <Helmet>
+                <title>DREAM TRAVEL - ALLSPOT</title>
+            </Helmet>
             <div className="flex justify-center items-center py-14">
                 <select
                     className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 text-base font-semibold outline-none"
@@ -39,8 +43,8 @@ const AllTouristSpot = () => {
                         {
                             loading && <p><span className="loading loading-spinner text-error"></span></p>
                         }
-                        <div className="card w-80 bg-blue-200 shadow-2xl my-10 libre-font">
-                            <figure><img className='w-full' src={data.image} alt="Shoes" /></figure>
+                        <div className="card w-80 bg-blue-200 shadow-2xl my-10 libre-font h-[600px]">
+                            <figure data-aos="flip-left" data-aos-duration='2000' ><img className='w-full' src={data.image} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title font-bold text-2xl">{data.spotName}</h2>
                                 <h2>Average Cost : <span className="card-title font-bold text-2xl">${data.averageCost}</span></h2>

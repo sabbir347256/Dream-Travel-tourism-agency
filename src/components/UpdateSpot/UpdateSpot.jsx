@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { NavLink, useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -44,6 +45,9 @@ const UpdateSpot = () => {
 
     return (
         <div className="bgImage border h-screen ">
+            <Helmet>
+                <title>DREAM TRAVEL - UpdateSpot</title>
+            </Helmet>
             <div className="relative top-12">
                 <NavLink to='/mylist'><button className="btn btn-primary text-white font-medium px-10 ml-24 ">Back</button></NavLink>
             </div>

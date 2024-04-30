@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const BdViewDetailsPage = () => {
@@ -7,6 +8,9 @@ const BdViewDetailsPage = () => {
     const { averageCost, countryName, image, location, perYearVisitor, seasonality, shortDescription, spotName, travelTime } = detailsData;
     return (
         <div className="bg-pink-200 flex flex-col md:flex-col lg:flex-row p-10 ibmFont">
+            <Helmet>
+                <title>DREAM TRAVEL - {`${spotName}`}</title>
+            </Helmet>
             <div>
                 <img className="w-[1200px] h-[200px] md:h-[400px] lg:h-[500px]  rounded-t-lg md:rounded-lg lg:rounded-l-lg" src={image} alt="" />
             </div>

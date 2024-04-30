@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 import SubmitData from './components/SubmitData/SubmitData';
 import Root from './components/Root/Root';
 import ErrorPage from './components/ErrorPage/ErrorPage';
@@ -29,6 +30,10 @@ import AllTouristSpot from './components/AllSpot/AllTouristSpot';
 import AllDataViewDetails from './components/AllSpot/AllDataViewDetails';
 import Mylist from './components/Mylist/Mylist';
 import UpdateSpot from './components/UpdateSpot/UpdateSpot';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const router = createBrowserRouter([
   {
@@ -126,9 +131,9 @@ const router = createBrowserRouter([
         element: <PrivateRoute><Mylist></Mylist></PrivateRoute>,
       },
       {
-        path :'/updateSpot/:id',
-        element : <UpdateSpot></UpdateSpot>,
-        loader : ({params}) => fetch(`http://localhost:5000/addspot/${params.id}`)
+        path: '/updateSpot/:id',
+        element: <UpdateSpot></UpdateSpot>,
+        loader: ({ params }) => fetch(`http://localhost:5000/addspot/${params.id}`)
       }
     ]
   },
@@ -140,8 +145,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
+
     <AuthContext>
-      <RouterProvider router={router} />
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
     </AuthContext>
   </>,
 )

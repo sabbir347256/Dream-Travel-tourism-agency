@@ -1,11 +1,5 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import pic1 from './New folder/bd.jpg';
-import pic2 from './New folder/indonesia.jpg';
-import pic3 from './New folder/cambabia.jpg';
-import pic4 from './New folder/malyesia.jpg';
-import pic5 from './New folder/vietnum.jpg';
-import pic6 from './New folder/thiland.jpg';
 import { useTypewriter } from 'react-simple-typewriter'
 
 
@@ -40,14 +34,15 @@ const Slider = () => {
     return (
         <div>
             <Carousel className=" shadow-lg" responsive={responsive}>
-                <div><img className="w-[435px] h-80" src={pic1} alt="" /></div>
-                <div><img className="w-[435px] h-80" src={pic2} alt="" /></div>
-                <div><img className="w-[435px] h-80" src={pic3} alt="" /></div>
-                <div><img className="w-[435px] h-80" src={pic4} alt="" /></div>
-                <div><img className="w-[435px] h-80" src={pic5} alt="" /></div>
-                <div><img className="w-[435px] h-80" src={pic6} alt="" /></div>
+                <div className="bgSlider"></div>
+                <div className="indoSlider"></div>
+                <div className="camSlider"></div>
+                <div className="malSlider"></div>
+                <div className="vietSlider"></div>
+                <div className="thaiSlider"></div>
+                
             </Carousel>
-            <h2 className="text-3xl md:text-4xl lg:text-6xl text-center font-bold relative bottom-60  z-10 text-[#FF0060] libre-font">{typeEffect}<br /> Be Safe & Careful</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-6xl text-center font-bold relative bottom-60  z-10 text-[#FFF5E0] libre-font">{typeEffect}<br /> Be Safe & Careful</h2>
         </div>
     );
 };

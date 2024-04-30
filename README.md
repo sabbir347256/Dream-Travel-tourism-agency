@@ -1,8 +1,23 @@
-# React + Vite
+## 🔗 Links live site :
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+PROJECT Name :  
+# DREAM TRAVEL Tourism Agency 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Bullet Point feature For my D-Care project :
+
+ - Banner Slider
+ - Country Section
+ - All Tourist spot section
+ - ViewDetailsProperty Section
+ - Update and delete section and function
+ - Login and Register section
+ - Footer
+
+
+## NPM package install
+
+- AOS package
+- Animate CSS
+- React-simple-typewriter
+- React Awesome reveal

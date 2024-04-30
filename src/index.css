@@ -1,26 +1,148 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.robo-font{
-    font-family: "Roboto Slab", serif;
+.robo-font {
+  font-family: "Roboto Slab", serif;
 }
 
-.libre-font{
-    font-family: "Libre Baskerville", serif;
-  }
-
-.bgImage{
-    background-image: url(./components/AddTouristSpot/bgImage.jpg);
-    background-position: center;
-    background-size: cover;
+.libre-font {
+  font-family: "Libre Baskerville", serif;
 }
-.ibmFont{
-    font-family: "IBM Plex Serif", serif;
-  }
-  .footerImage{
-    background-image: url(../src/image/footerbg.jpg);
-  }
+
+.poppinsFont {
+  font-family: "Poppins", sans-serif;
+}
+
+.barlowFont {
+  font-family: "Barlow", sans-serif;
+}
+
+
+.bgImage {
+  background-image: url(./components/AddTouristSpot/bgImage.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.ibmFont {
+  font-family: "IBM Plex Serif", serif;
+}
+
+.footerBg {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url(./image/footer.jpg);
+
+}
+
+.bgSlider {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url(./image/Newfolder/bd.jpg);
+  background-size: cover;
+  width: 435px;
+  height: 320px;
+}
+
+.indoSlider {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url(./image/Newfolder/indonesia.jpg);
+  background-size: cover;
+  width: 435px;
+  height: 320px
+}
+
+.camSlider {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url(./image/Newfolder/cambabia.jpg);
+  background-size: cover;
+  width: 435px;
+  height: 320px
+}
+
+.malSlider {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url(./image/Newfolder/malyesia.jpg);
+  background-size: cover;
+  width: 435px;
+  height: 320px
+}
+
+.vietSlider {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url(./image/Newfolder/vietnum.jpg);
+  background-size: cover;
+  width: 435px;
+  height: 320px
+}
+
+.thaiSlider {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url(./image/Newfolder/thiland.jpg);
+  background-size: cover;
+  width: 435px;
+  height: 320px
+}
+
+
+/* touristSpotHomeSectioon */
+
+.bdHomeImg {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 80%), url(./image/touristSpot/Bd.jpg);
+  background-size: cover;
+  height: 25rem;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+}
+.bdHomeImg:hover {
+  transform: scale(1.1);
+}
+
+.thaiBgImg {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 80%), url(./image/touristSpot/thai.jpg);
+  background-size: cover;
+  height: 25rem;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+}
+.thaiBgImg:hover {
+  transform: scale(1.1);
+}
+.indoBgImg {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 80%), url(./image/touristSpot/indonesia.jpg);
+  background-size: cover;
+  height: 25rem;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+}
+.indoBgImg:hover {
+  transform: scale(1.1);
+}
+.vietBgImg {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 80%), url(./image/touristSpot/vietnam.jpg);
+  background-size: cover;
+  height: 25rem;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+}
+.vietBgImg:hover {
+  transform: scale(1.1);
+}
+.malayBgImg {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 80%), url(./image/touristSpot/malaysia.jpg);
+  background-size: cover;
+  height: 25rem;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+}
+.malayBgImg:hover {
+  transform: scale(1.1);
+}
+.combodiaBgImg {
+  background-image: linear-gradient(90deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 80%), url(./image/touristSpot/combodia.jpg);
+  background-size: cover;
+  height: 25rem;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+}
+.combodiaBgImg:hover {
+  transform: scale(1.1);
+}
