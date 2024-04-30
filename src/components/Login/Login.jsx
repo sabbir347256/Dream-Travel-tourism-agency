@@ -15,7 +15,6 @@ const Login = () => {
     const navigate = useNavigate();
     const [success, setSuccess] = useState('');
     const [emailnotMatch, setemailnotMatch] = useState();
-    const [passwordError, setPasswordError] = useState();
 
 
     const handleLogin = e => {
@@ -40,8 +39,7 @@ const Login = () => {
                 navigate(location?.state ? location.state :'/')
             })
             .catch(error => {
-                setemailnotMatch(alert("Email is not match, Please provide a correct email"))
-                setPasswordError(alert("Password does not match, Please provide a correct password"))
+                setemailnotMatch(alert("Email is not match, Please provide a correct email"));
                 console.error(error);
             })
     }
@@ -112,12 +110,7 @@ const Login = () => {
                             <span className="label-text">Password</span>
                         </label>
                         <input type="password" name='password' placeholder="password" className="input input-bordered" required />
-                        {
-                            passwordError && <p>{passwordError}</p>
-                        }
-
                     </div>
-
                     <div className="form-control mt-6">
                         <button className="btn btn-primary">Login</button>
                     </div>
