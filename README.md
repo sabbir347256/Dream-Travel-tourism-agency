@@ -12,7 +12,7 @@ PROJECT Name :
  - ViewDetailsProperty Section
  - Update and delete section and function
  - Login and Register section
- - Footer
+ - Foote
 
 
 ## NPM package install
