@@ -12,7 +12,7 @@ const TourismCountry = () => {
     return (
         <div className="libre-font bg-gray-50  max-w-6xl mx-auto pt-10 rounded-lg ">
             <div className="text-emerald-800">
-                <h2 className="text-center text-4xl font-bold ">Checkout Beautiful Places <br /> Arround the World</h2>
+                <h2 className="text-center text-4xl font-bold "> <br /> Arround the World</h2>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-7'>
                 <div className="card w-11/12 bg-blue-100 border border-r-yellow-300  shadow-xl mt-20"data-aos="flip-left" data-aos-duration='2000'>
