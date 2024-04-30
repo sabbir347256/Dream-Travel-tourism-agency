@@ -14,7 +14,7 @@ const Discount = () => {
                                 <FaUserCircle className="text-pink-200"></FaUserCircle>
                             </div>
                             <div>
-                                <h2 className="text-lg font-bold mb-3">100 New Daily user</h2>
+                                <h2 className="text-lg font-bold mb-3">100 New Daily User</h2>
                                 <p>Here All These New User.</p>
                             </div>
                         </div>
