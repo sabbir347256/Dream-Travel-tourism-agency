@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet-async';
 const Register = () => {
-    const { createUser } = useContext(AuthProvider);
+    const { createUser, updateUserProfile } = useContext(AuthProvider);
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const [success, setSuccess] = useState('');
@@ -14,9 +14,8 @@ const Register = () => {
         const form = e.target;
         const name = form.name.value;
         const email = form.email.value;
-        const photo = form.photo.value;
+        const photoUrl = form.photoUrl.value;
         const password = form.password.value;
-        console.log(name, email, photo, password);
 
         if (password.length < 6) {
             setError('Please provide at least 6 character password');
@@ -41,11 +40,19 @@ const Register = () => {
                         timer: 1500
                     })
                 );
+                updateUserProfile(name, photoUrl)
+                    .then(() => {
+                        console.log(name)
+                    })
+                    .catch(() => {
+
+                    })
                 navigate(location?.state ? location.state : '/login')
             })
             .catch(error => {
                 console.error(error);
-            })
+            });
+
     }
 
     return (
@@ -74,7 +81,7 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text">PhotoUrl</span>
                         </label>
-                        <input type="text" name='photo' placeholder="photoUrl" className="input input-bordered" required />
+                        <input type="text" name='photoUrl' placeholder="photoUrl" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
