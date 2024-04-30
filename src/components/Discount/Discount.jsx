@@ -6,10 +6,10 @@ const Discount = () => {
     return (
         <div className="flex flex-col md:flex-col lg:flex-row libre-font mt-20 max-w-6xl mx-auto mr-7">
             <div className="w-3/5 ml-0 md:ml-44 lg:ml-0">
-                <h2 data-aos="fade-right" data-aos-duration='1000' className="text-4xl text-center font-extrabold mb-10 mt-20  w-[350px] md:w-full lg:w-full left-5 md:left-0 lg:left-0 relative">90,100 Marker In 120+ Countries.</h2>
+                <h2 data-aos="fade-up" data-aos-duration='1000' className="text-4xl text-center font-extrabold mb-10 mt-20  w-[350px] md:w-full lg:w-full left-5 md:left-0 lg:left-0 relative">90,100 Marker In 120+ Countries.</h2>
                 <div className="flex flex-col md:flex-row lg:flex-row">
-                    <div className="relative left-20 md:left-0 lg:left-0" data-aos="fade-right" data-aos-duration='1000'>
-                        <div className="flex items-center">
+                    <div className="relative left-20 md:left-0 lg:left-0" >
+                        <div className="flex items-center"data-aos="fade-up" data-aos-duration='1000'>
                             <div className="bg-green-400 mr-4 p-2 rounded-full ">
                                 <FaUserCircle className="text-pink-200"></FaUserCircle>
                             </div>
@@ -18,7 +18,7 @@ const Discount = () => {
                                 <p>Here All These New User.</p>
                             </div>
                         </div>
-                        <div className="flex items-center mt-12">
+                        <div className="flex items-center mt-12"data-aos="fade-down" data-aos-duration='1000'>
                             <div className="bg-amber-400 mr-4 p-2 rounded-full ">
                                 <SlSocialFoursqare></SlSocialFoursqare>
                             </div>
@@ -28,8 +28,8 @@ const Discount = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="ml-10 relative left-10 mt-7 md:mt-0 lg:mt-0 md:left-0 lg:left-0"data-aos="fade-right" data-aos-duration='1000'>
-                        <div className="flex items-center mb-12">
+                    <div className="ml-10 relative left-10 mt-7 md:mt-0 lg:mt-0 md:left-0 lg:left-0">
+                        <div className="flex items-center mb-12"data-aos="fade-up" data-aos-duration='1000'>
                             <div className="bg-red-400 mr-4 p-2 rounded-full" >
                                 <FaRegIdBadge></FaRegIdBadge>
                             </div>
@@ -38,7 +38,7 @@ const Discount = () => {
                                 <p>Here see these our agency brand and bonding in client</p>
                             </div>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center"data-aos="fade-down" data-aos-duration='1000'>
                             <div className="bg-indigo-300 mr-4 p-2 rounded-full">
                                 <RiGalleryLine></RiGalleryLine>
                             </div>
@@ -50,7 +50,7 @@ const Discount = () => {
                     </div>
                 </div>
             </div>
-            <div className="ml-0 md:ml-16 lg:ml-0" data-aos="fade-left" data-aos-duration='1000'>
+            <div className="ml-0 md:ml-16 lg:ml-0"data-aos="fade-up" data-aos-duration='1000'>
                 <img className="rounded-full" src={image} alt="" />
             </div>
         </div>

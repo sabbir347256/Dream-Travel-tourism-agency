@@ -9,7 +9,7 @@ const AllTouristSpot = () => {
     const [value, setvalue] = useState("ascending");
 
     useEffect(() => {
-        fetch('http://localhost:5000/allSpotData')
+        fetch('https://tourism-managment-server-site.vercel.app/allSpotData')
             .then(res => res.json())
             .then(data => setAllSpotData(data))
     }, [])

@@ -5,7 +5,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
-import SubmitData from './components/SubmitData/SubmitData';
 import Root from './components/Root/Root';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Home from './components/Home/Home';
@@ -60,62 +59,62 @@ const router = createBrowserRouter([
       {
         path: '/bdviewDetails',
         element: <BdViewSpot></BdViewSpot>,
-        loader: () => fetch('http://localhost:5000/data')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/data')
       },
       {
         path: '/viewDetails/:id',
         element: <BdViewDetailsPage></BdViewDetailsPage>,
-        loader: () => fetch('http://localhost:5000/data')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/data')
       },
       {
         path: '/thiaViewDetails',
         element: <ThaiAlldata></ThaiAlldata>,
-        loader: () => fetch('http://localhost:5000/thaiData')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/thaiData')
       },
       {
         path: '/thaiviewDetails/:id',
         element: <ThaiSpecificSpotDetails></ThaiSpecificSpotDetails>,
-        loader: () => fetch('http://localhost:5000/thaiData')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/thaiData')
       },
       {
         path: '/indovViewDetails',
         element: <IndoData></IndoData>,
-        loader: () => fetch('http://localhost:5000/indoData')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/indoData')
       },
       {
         path: '/indoviewDetails/:id',
         element: <IndoSpecificSpotDetails></IndoSpecificSpotDetails>,
-        loader: () => fetch('http://localhost:5000/indoData')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/indoData')
       },
       {
         path: '/malViewDetails',
         element: <MalaysiaAllData></MalaysiaAllData>,
-        loader: () => fetch('http://localhost:5000/malData')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/malData')
       },
       {
         path: '/malviewDetails/:id',
         element: <MalaysiaSpecificDetails></MalaysiaSpecificDetails>,
-        loader: () => fetch('http://localhost:5000/malData')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/malData')
       },
       {
         path: '/vietViewDetails',
         element: <VietnamAllSpot></VietnamAllSpot>,
-        loader: () => fetch('http://localhost:5000/vietData')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/vietData')
       },
       {
         path: '/vietviewDetails/:id',
         element: <VietnamViewDetails></VietnamViewDetails>,
-        loader: () => fetch('http://localhost:5000/vietData')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/vietData')
       },
       {
         path: '/comboViewDetails',
         element: <CombodiaAllData></CombodiaAllData>,
-        loader: () => fetch('http://localhost:5000/colombiaData')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/colombiaData')
       },
       {
         path: '/comboviewDetails/:id',
         element: <CombodiaViewDetails></CombodiaViewDetails>,
-        loader: () => fetch('http://localhost:5000/colombiaData')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/colombiaData')
       },
       {
         path: '/allSpot',
@@ -124,7 +123,7 @@ const router = createBrowserRouter([
       {
         path: '/allDataViewDetails/:id',
         element: <AllDataViewDetails></AllDataViewDetails>,
-        loader: () => fetch('http://localhost:5000/allSpotData')
+        loader: () => fetch('https://tourism-managment-server-site.vercel.app/allSpotData')
       },
       {
         path: '/myList',
@@ -133,14 +132,10 @@ const router = createBrowserRouter([
       {
         path: '/updateSpot/:id',
         element: <UpdateSpot></UpdateSpot>,
-        loader: ({ params }) => fetch(`http://localhost:5000/addspot/${params.id}`)
+        loader: ({ params }) => fetch(`https://tourism-managment-server-site.vercel.app/addspot/${params.id}`)
       }
     ]
   },
-  {
-    path: '/submit',
-    element: <SubmitData></SubmitData>
-  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

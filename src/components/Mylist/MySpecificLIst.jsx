@@ -8,7 +8,7 @@ const MySpecificLIst = ({ data }) => {
     const { averageCost, countryName, photo, location, perYearVisitor, seasonality, shortDescription, spotName, travelTime } = data;
     const handleDelete = _id =>{
         console.log(_id);
-        fetch(`http://localhost:5000/addspot/${_id}`,{
+        fetch(`https://tourism-managment-server-site.vercel.app/addspot/${_id}`,{
             method : 'DELETE'
         })
         .then(res => res.json())

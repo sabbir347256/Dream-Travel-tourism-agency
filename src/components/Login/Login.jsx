@@ -37,7 +37,7 @@ const Login = () => {
                         timer: 1500
                     })
                 );
-                navigate(location?.state ? location.state : '/')
+                navigate(location?.state ? location.state :'/')
             })
             .catch(error => {
                 setemailnotMatch(alert("Email is not match, Please provide a correct email"))
