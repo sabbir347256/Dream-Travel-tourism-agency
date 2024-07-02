@@ -36,6 +36,13 @@ PROJECT Name :
  - A user any kinds of tourist place information add in this website.
  - User can login and register.
  - After login a user, he/she see their photo and user information
+
+##  If you clone this code. so follow this step :
+1. first of all copy the git clone link.
+2. Then open cmd line and go to your path and type git clone and paste this link and press enter.
+3. Then type code . and press enter. so open visual studio code.
+4. Here one file name is firebase and one file name is .env.local. Here all code is secret. After clone here all of code is change now.
+   
    
 ## NPM package install
 
