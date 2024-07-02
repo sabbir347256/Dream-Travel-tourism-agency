@@ -4,7 +4,7 @@
 PROJECT Name :  
 # DREAM TRAVEL Tourism Agency 
 
-##  Bullet Point feature For my D-Care project :
+##  Bullet Point feature For this project :
 
  - Banner Slider
  - Country Section
