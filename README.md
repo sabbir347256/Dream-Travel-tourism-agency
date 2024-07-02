@@ -13,7 +13,7 @@ PROJECT Name :
  - Update and delete section and function
  - Login and Register section
  - Footer
- - 
+
 ##  Technologies what use this project :
 
  - Html
